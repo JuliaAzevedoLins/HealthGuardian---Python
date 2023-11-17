@@ -33,7 +33,7 @@ def blank(): #Função para espaços em branco e organização no código
 
 def validar_cpf(cpf):
     try:
-        int(cpf)  # Tenta converter o CPF em um número
+        int(cpf)  # Converter o CPF em um número
         if len(cpf) != 11:
             raise ValueError("O CPF deve conter 11 dígitos.")
         return True
@@ -75,7 +75,7 @@ def imprimir_dados_pacientes():
     ax.axis('off')
     
     # Definindo a cor de fundo para azul claro apenas no cabeçalho (utilizando código hexadecimal)
-    header_color = '#5E9299'  # Código hexadecimal para azul claro
+    header_color = '#5E9299'
     cell_colors = [[header_color if i == 0 else 'white' for i in range(len(df_selecionado.columns))]] + [['white' for _ in range(len(df_selecionado.columns))] for _ in range(len(df_selecionado)-1)]
     
     table = ax.table(cellText=df_selecionado.values, colLabels=df_selecionado.columns, cellLoc='center', loc='center', cellColours=cell_colors)
@@ -138,7 +138,7 @@ def autenticacao():
         print(blank())
         print(divisa())
         print("Bem vindo! Escolha o tipo de usuário para acessar o HealthGuardian :)")
-        print("1. Funcionário da NotreDame")
+        print("1. Funcionário")
         print("2. Paciente")
         print("0. Sair")
         print(divisa())
@@ -303,7 +303,7 @@ def falar_com_healthguardian():
     print(divisa())
     print(blank())
 
-    # Aqui você pode adicionar as perguntas que deseja fazer ao paciente
+    # Adicionando as perguntas que serão feitas ao paciente
     respostas = {}
 
     respostas["temperatura"] = float(input("Qual é a sua temperatura corporal? "))
@@ -313,15 +313,15 @@ def falar_com_healthguardian():
     print(divisa())
     print("Avaliando suas respostas...")
 
-    # Lógica para avaliação dos sintomas (pode ser personalizada de acordo com a necessidade)
+    # Lógica para avaliação dos sintomas
 
-    # Exemplo simples: se a temperatura for maior que 38, sugerir contato com o médico
+    # Se a temperatura for maior que 38, sugerir contato com o médico
     if respostas["temperatura"] >= 38:
         print("Sua temperatura está elevada. Recomendamos que entre em contato com seu médico.")
     else:
         print("Seus sintomas foram avaliados. Continue monitorando sua saúde.")
 
-    # Aqui você pode salvar ou processar as respostas, por exemplo, enviá-las para os funcionários
+    
 
 # --------------------------------------------------------------
 #               CADASTRO DE PACIENTE PELO FUNCIONÁRIO
@@ -345,7 +345,7 @@ def cadastrar_paciente_funcionario():
 # --------------------------------------------------------------
 #                   EXECUTAR O PROGRAMA
 # --------------------------------------------------------------
-# serve para verificar se o script está sendo executado diretamente (como um programa principal) ou se está sendo importado como um módulo em outro script.
+# Serve para verificar se o script está sendo executado diretamente (como um programa principal) ou se está sendo importado como um módulo em outro script.
 
 if __name__ == "__main__":
     menu_principal()

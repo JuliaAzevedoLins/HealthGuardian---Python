@@ -9,6 +9,8 @@ import json
 import matplotlib.pyplot as plt
 import pandas as pd
 from prettytable import PrettyTable
+import time
+import sys
 
 #===============================================================
 #                        HEALTHGUARDIAN
@@ -136,7 +138,7 @@ def autenticacao():
     while True:
         print(blank())
         print(divisa())
-        print("Bem vindo! Escolha o tipo de usuário para acessar o HealthGuardian :)")
+        print("ＢＥＭ－ＶＩＮＤＯ！Escolha o tipo de usuário para acessar o HealthGuardian :)")
         print("1. Funcionário")
         print("2. Paciente")
         print("0. Sair")
@@ -149,7 +151,7 @@ def autenticacao():
             usuario_paciente()
         elif opcao == "0":
             print(divisa())
-            print("Saindo do programa.")
+            print("ＳＡＩＮＤＯ ＤＯ ＰＲＯＧＲＡＭＡ．．．")
             print(divisa())
             sys.exit()
         else:
@@ -226,7 +228,7 @@ def usuario_paciente():
 def menu_principal():
     while True:
         print(divisa())
-        print("MENU PRINCIPAL")
+        print("ＭＥＮＵ ＰＲＩＮＣＩＰＡＬ")
         print("1. Funcionário")
         print("2. Paciente")
         print("0. Sair")
@@ -252,7 +254,7 @@ def menu_principal():
 def menu_funcionario():
     while True:
         print(divisa())
-        print("MENU DO FUNCIONÁRIO")
+        print("ＭＥＮＵ ＤＯ ＦＵＮＣＩＯＮＡＲＩＯ")
         print("1. Cadastrar Paciente")
         print("2. Ver Lista de Pacientes")
         print("0. Voltar ao Menu Principal")
@@ -276,7 +278,7 @@ def menu_funcionario():
 def menu_paciente():
     while True:
         print(divisa())
-        print("MENU DO PACIENTE")
+        print("ＭＥＮＵ ＤＯ ＰＡＣＩＥＮＴＥ")
         print("1. Falar com o HealthGuardian")
         print("0. Voltar ao Menu Principal")
         print(divisa())
@@ -292,13 +294,14 @@ def menu_paciente():
 
 # --------------------------------------------------------------
 #               FUNÇÕES DE INTERAÇÃO DO PACIENTE
-# --------------------------------------------------------------
-
+# --------------------------------------------------------------                                                                                                                                                                                                                                                                                                                       
+                                                                                      
 def falar_com_healthguardian():
     print(blank())
     print(divisa())
-    print("Bem-vindo ao HealthGuardian!")
+    print("ＢＥＭ－ＶＩＮＤＯ ＡＯ ＨＥＡＬＴＨ ＧＵＡＲＤＩＡＮ！")
     print("Responda algumas perguntas para avaliar seus sintomas.")
+    
     print(divisa())
     print(blank())
 
@@ -322,7 +325,7 @@ def falar_com_healthguardian():
 
     print(divisa())
     print("Avaliando suas respostas...")
-
+    
     # Avaliação dos sintomas
     table = PrettyTable(["Sintoma", "Avaliação"])
 

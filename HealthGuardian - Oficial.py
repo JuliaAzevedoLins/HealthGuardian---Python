@@ -50,7 +50,7 @@ def imprimir_dados_pacientes():
     df = pd.DataFrame(dados_pacientes)
     
     # Escolha as colunas que você deseja exibir na tabela
-    colunas_desejadas = ['nome_paciente', 'cpf_paciente', 'CEP_paciente', 'senha_paciente']  # Adicione as colunas desejadas aqui
+    colunas_desejadas = ['nome_paciente', 'cpf_paciente', 'sintoma_paciente', 'senha_paciente']  # Adicione as colunas desejadas aqui
     
     # Filtra o DataFrame para incluir apenas as colunas desejadas
     df_selecionado = df[colunas_desejadas]
@@ -110,7 +110,7 @@ def salvar_dados_pacientes(dados_pacientes):
         json.dump(dados_pacientes, arquivo, indent=4)
 
 # Função para cadastrar um novo usuário
-def cadastrar_pacientes(cpf, senha):
+def cadastrar_pacientes(nome, cpf, sintoma, senha):
     dados_pacientes = carregar_dados_pacientes()
 
     # Verificando se o CPF já está registrado
@@ -122,7 +122,9 @@ def cadastrar_pacientes(cpf, senha):
         return
 
     # Adicionando o novo usuário
+    dados_pacientes["nome_paciente"].append(nome)
     dados_pacientes["cpf_paciente"].append(cpf)
+    dados_pacientes["sintoma_paciente"].append(sintoma)
     dados_pacientes["senha_paciente"].append(senha)
     salvar_dados_pacientes(dados_pacientes)
     
@@ -162,7 +164,7 @@ def autenticacao():
 def usuario_funcionario():
     print(divisao())
     print("Olá funcionário! Faça aqui o seu login:")
-    usuario = input("Digite seu usuário (CPF): ")
+    usuario = input("Digite seu usuário: ")
     senha = input("Digite sua senha: ")
     
     dados_funcionarios = carregar_dados_funcionarios()
@@ -192,7 +194,7 @@ def usuario_funcionario():
 def usuario_paciente():
     print(divisao())
     print("Olá paciente! Faça aqui o seu login:")
-    usuario_paciente = input("Digite seu usuário (CPF): ")
+    usuario_paciente = input("Digite o seu CPF: ")
     senha_paciente = input("Digite sua senha: ")
 
     dados_pacientes = carregar_dados_pacientes()
@@ -327,13 +329,18 @@ def falar_com_healthguardian():
 
 def cadastrar_paciente_funcionario():
     print(divisa())
+    novo_nome = input("Digite o nome do paciente: ")
+    
+
     novo_cpf = input("Digite o novo CPF do paciente: ")
     while not validar_cpf(novo_cpf):
         print(divisa())
         novo_cpf = input("CPF inválido, digite novamente: ")
+    
+    novo_sintoma = input("Digite o sintoma do paciente: ")
 
     nova_senha = input("Digite a senha do paciente: ")
-    cadastrar_pacientes(novo_cpf, nova_senha)
+    cadastrar_pacientes(novo_nome, novo_cpf, novo_sintoma, nova_senha)
 
 # --------------------------------------------------------------
 #                   EXECUTAR O PROGRAMA

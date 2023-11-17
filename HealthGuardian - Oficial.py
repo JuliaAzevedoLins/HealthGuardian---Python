@@ -4,7 +4,6 @@
 #LUIS GUSTAVO BARRETO GARRIDO - RM99210
 
 #---------------------------------------------------------------
-import requests
 import sys
 import json
 import matplotlib.pyplot as plt
@@ -306,48 +305,68 @@ def falar_com_healthguardian():
     # Adicionando as perguntas que serão feitas ao paciente
     respostas = {}
 
+    try:
+        respostas["temperatura"] = float(input("Qual é a sua temperatura corporal? "))
+    except ValueError:
+        print("Por favor, forneça um valor numérico para a temperatura.")
+        return  # Retornar para evitar a continuação do código em caso de erro
+
     respostas["tosse"] = input("Você está sofrendo de tosse? (y/n) ")
     respostas["dor_garganta"] = input("Você tem dor de garganta? (y/n) ")
     respostas["dificuldade_respirar"] = input("Você está com dificuldade para respirar? (y/n) ")
     respostas["contato_infectado"] = input("Você teve contato próximo com alguém diagnosticado com COVID-19 recentemente? (y/n) ")
     respostas["viagem_recente"] = input("Você fez alguma viagem internacional nos últimos 14 dias? (y/n) ")
     respostas["vacina_covid"] = input("Você recebeu a vacina contra a COVID-19? (y/n) ")
+    respostas["medicamentos"] = input("Você tem sentido melhoras com o medicamento? (y/n) ")
     respostas["outras_condicoes"] = input("Você tem alguma condição de saúde pré-existente? Se sim, por favor, mencione. ")
-
 
     print(divisa())
     print("Avaliando suas respostas...")
 
     # Avaliação dos sintomas
+    table = PrettyTable(["Sintoma", "Avaliação"])
 
     # Se a temperatura for maior que 38, sugerir contato com o médico
-
-    if respostas["temperatura"] >= 38:
-        print("Sua temperatura está elevada. Recomendamos que entre em contato com seu médico.")
+    try:
+        if respostas["temperatura"] >= 38:
+            table.add_row(["Temperatura elevada", "Recomendamos contato com o médico"])
+    except KeyError:
+        pass  # Chave 'temperatura' não presente nas respostas
 
     # Verificar a presença de sintomas específicos
-    if "tosse" in respostas["sintomas"].lower() or "dor de garganta" in respostas["sintomas"].lower():
-        print("Você mencionou sintomas respiratórios. Se eles persistirem, consulte um profissional de saúde.")
+    try:
+        if "tosse" in respostas.get("tosse", "").lower() or "dor de garganta" in respostas.get("dor_garganta", "").lower():
+            table.add_row(["Sintomas respiratórios", "Consulte um profissional de saúde se persistirem"])
+    except KeyError:
+        pass  # Chaves 'tosse' ou 'dor_garganta' não presentes nas respostas
 
-    # Avaliar a eficácia do medicamento
-    if respostas["medicamentos"].lower() == "y":
-        print("É bom saber que você está sentindo melhor com o medicamento. Continue o tratamento conforme prescrito.")
-    elif respostas["medicamentos"].lower() == "n":
-        print("Se os sintomas persistirem ou piorarem, consulte seu médico para ajustar o tratamento.")
+   # Avaliar a eficácia do medicamento
+    try:
+        medicamentos = respostas.get("medicamentos", "").lower()
+        if medicamentos == "y":
+            table.add_row(["Eficácia do medicamento", "Continue o tratamento conforme prescrito"])
+        elif medicamentos == "n":
+            table.add_row(["Eficácia do medicamento", "Consulte o médico se os sintomas persistirem ou piorarem"])
+    except KeyError:
+        pass  # Chave 'medicamentos' não presente nas respostas
 
     # Verificar histórico de viagem e contato próximo
-    if respostas["viagem_recente"].lower() == "y" or respostas["contato_infectado"].lower() == "y":
-        print("Devido ao seu histórico de viagem ou contato próximo, é aconselhável monitorar sua saúde e considerar a realização de um teste para COVID-19.")
+    if respostas.get("viagem_recente", "").lower() == "y" or respostas.get("contato_infectado", "").lower() == "y":
+        mensagem_viagem_contato = "Devido ao seu histórico de viagem ou contato próximo, é aconselhável monitorar sua saúde e considerar a realização de um teste para COVID-19."
+        table.add_row(["Histórico de viagem ou contato próximo", mensagem_viagem_contato])
+
 
     # Recomendar a vacinação se ainda não tiver sido feita
     if respostas["vacina_covid"].lower() == "n":
         print("Considere receber a vacina contra a COVID-19 para proteger a si mesmo e aos outros.")
 
     # Verificar condições de saúde pré-existentes
-    if respostas["outras_condicoes"]:
-        print(f"Levamos em consideração sua condição de saúde pré-existente: {respostas['outras_condicoes']}. Mantenha-se em contato com seu médico para monitorar sua saúde.")
+    outras_condicoes = respostas.get("outras_condicoes", "")
+    if outras_condicoes:
+        mensagem_condicoes = f"Levamos em consideração sua condição de saúde pré-existente: {outras_condicoes}. Mantenha-se em contato com seu médico para monitorar sua saúde."
+        table.add_row(["Condições pré-existentes", mensagem_condicoes])
     
-
+    print(table)
 # --------------------------------------------------------------
 #               CADASTRO DE PACIENTE PELO FUNCIONÁRIO
 # --------------------------------------------------------------

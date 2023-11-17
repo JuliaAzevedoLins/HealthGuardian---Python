@@ -306,21 +306,46 @@ def falar_com_healthguardian():
     # Adicionando as perguntas que serão feitas ao paciente
     respostas = {}
 
-    respostas["temperatura"] = float(input("Qual é a sua temperatura corporal? "))
-    respostas["sintomas"] = input("Quais sintomas você está experimentando? ")
-    respostas["medicamentos"] = input("Você tem sentido melhoras com o medicamento? (y/n)")
+    respostas["tosse"] = input("Você está sofrendo de tosse? (y/n) ")
+    respostas["dor_garganta"] = input("Você tem dor de garganta? (y/n) ")
+    respostas["dificuldade_respirar"] = input("Você está com dificuldade para respirar? (y/n) ")
+    respostas["contato_infectado"] = input("Você teve contato próximo com alguém diagnosticado com COVID-19 recentemente? (y/n) ")
+    respostas["viagem_recente"] = input("Você fez alguma viagem internacional nos últimos 14 dias? (y/n) ")
+    respostas["vacina_covid"] = input("Você recebeu a vacina contra a COVID-19? (y/n) ")
+    respostas["outras_condicoes"] = input("Você tem alguma condição de saúde pré-existente? Se sim, por favor, mencione. ")
+
 
     print(divisa())
     print("Avaliando suas respostas...")
 
-    # Lógica para avaliação dos sintomas
+    # Avaliação dos sintomas
 
     # Se a temperatura for maior que 38, sugerir contato com o médico
+
     if respostas["temperatura"] >= 38:
         print("Sua temperatura está elevada. Recomendamos que entre em contato com seu médico.")
-    else:
-        print("Seus sintomas foram avaliados. Continue monitorando sua saúde.")
 
+    # Verificar a presença de sintomas específicos
+    if "tosse" in respostas["sintomas"].lower() or "dor de garganta" in respostas["sintomas"].lower():
+        print("Você mencionou sintomas respiratórios. Se eles persistirem, consulte um profissional de saúde.")
+
+    # Avaliar a eficácia do medicamento
+    if respostas["medicamentos"].lower() == "y":
+        print("É bom saber que você está sentindo melhor com o medicamento. Continue o tratamento conforme prescrito.")
+    elif respostas["medicamentos"].lower() == "n":
+        print("Se os sintomas persistirem ou piorarem, consulte seu médico para ajustar o tratamento.")
+
+    # Verificar histórico de viagem e contato próximo
+    if respostas["viagem_recente"].lower() == "y" or respostas["contato_infectado"].lower() == "y":
+        print("Devido ao seu histórico de viagem ou contato próximo, é aconselhável monitorar sua saúde e considerar a realização de um teste para COVID-19.")
+
+    # Recomendar a vacinação se ainda não tiver sido feita
+    if respostas["vacina_covid"].lower() == "n":
+        print("Considere receber a vacina contra a COVID-19 para proteger a si mesmo e aos outros.")
+
+    # Verificar condições de saúde pré-existentes
+    if respostas["outras_condicoes"]:
+        print(f"Levamos em consideração sua condição de saúde pré-existente: {respostas['outras_condicoes']}. Mantenha-se em contato com seu médico para monitorar sua saúde.")
     
 
 # --------------------------------------------------------------

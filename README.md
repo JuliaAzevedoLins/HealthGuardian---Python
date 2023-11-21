@@ -26,7 +26,7 @@ Usuário: admin
 Senha: 23456
 
 ```
-## 1. Objetivo do Projeto:
+# Objetivo do Projeto:
 
 O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento de saúde baseado em inteligência artificial, proporcionando acompanhamento contínuo pós-atendimento médico. O sistema visa oferecer suporte proativo aos usuários, avaliando a gravidade dos sintomas e fornecendo orientações sobre a necessidade de retorno ao médico.
 
@@ -55,7 +55,7 @@ O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento 
 **7. Menus Interativos:**
 - Implementação de menus interativos para facilitar a navegação tanto para funcionários quanto para pacientes.
 
-## Requisitos e Execução do Código:
+# Requisitos e Execução do Código:
 
 **Python:**
 - Certifique-se de ter o Python instalado

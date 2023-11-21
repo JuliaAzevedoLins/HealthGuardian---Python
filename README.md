@@ -16,7 +16,7 @@
 ###
 
 <div align="center">
-  <img height="200" src="https://tenor.com/bXe9w.gif"  />
+  <img height="200" src="https://i.pinimg.com/originals/06/df/22/06df2287db963c5230f9b2d86e7728ba.gif"  />
 </div>
 
 ## Integrantes - ESPW
@@ -29,27 +29,27 @@ O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento 
 
 <a href="https://juliaazevedolins.github.io/healthguardian-site/">Clique aqui para acessar o nosso site e saber mais sobre o HealthGuardian</a>
 
-## Funcionalidades Principais:
+# Funcionalidades do HealthGuardian
 
-1. **Cadastro de Pacientes:**
-   - O HealthGuardian permite que funcionários realizem o cadastro de novos pacientes, inserindo nome, CPF, sintomas e senha.
+## 1. Cadastro de Pacientes
+   - Permite que funcionários realizem o cadastro de novos pacientes, inserindo nome, CPF, sintomas e senha.
 
-2. **Login de Usuários:**
+## 2. Login de Usuários
    - Funcionalidade de login para funcionários e pacientes, garantindo autenticação segura.
 
-3. **Interatividade com Pacientes:**
+## 3. Interatividade com Pacientes
    - Pacientes podem interagir com o HealthGuardian, respondendo a perguntas sobre seus sintomas para avaliação.
 
-4. **Análise de Sintomas:**
+## 4. Análise de Sintomas
    - O sistema realiza uma análise dos sintomas apresentados pelos pacientes, sugerindo medidas com base nas respostas fornecidas.
 
-5. **Visualização de Dados:**
+## 5. Visualização de Dados
    - Os funcionários têm acesso à lista de pacientes cadastrados, podendo visualizar e imprimir informações como nome, CPF, sintomas e senha de forma organizada.
 
-6. **Integração com Arquivos JSON:**
+## 6. Integração com Arquivos JSON
    - Utilização de arquivos JSON para armazenar e carregar dados dos pacientes e funcionários.
 
-7. **Menus Interativos:**
+## 7. Menus Interativos
    - Implementação de menus interativos para facilitar a navegação tanto para funcionários quanto para pacientes.
 
 ## Requisitos e Execução do Código:

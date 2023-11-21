@@ -23,7 +23,7 @@ O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento 
 
 <a href="https://juliaazevedolins.github.io/healthguardian-site/">Clique aqui para acessar o nosso site e saber mais sobre o HealthGuardian</a>
 
-# IMPORTANTE
+## Importante
 ```diff
 -                        SESSÃO DE FUNCIONÁRIOS                        -
 Para acessar a sessão de funcionários, utilize as seguintes credenciais:

@@ -17,12 +17,6 @@
 - Julia Azevedo Lins: RM98690
 - Luís Gustavo Barreto Garrido: RM99210
 
-## 1. Objetivo do Projeto:
-
-O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento de saúde baseado em inteligência artificial, proporcionando acompanhamento contínuo pós-atendimento médico. O sistema visa oferecer suporte proativo aos usuários, avaliando a gravidade dos sintomas e fornecendo orientações sobre a necessidade de retorno ao médico.
-
-<a href="https://juliaazevedolins.github.io/healthguardian-site/">Clique aqui para acessar o nosso site e saber mais sobre o HealthGuardian</a>
-
 ## Importante
 ```diff
 -                        SESSÃO DE FUNCIONÁRIOS                        -
@@ -32,6 +26,12 @@ Usuário: admin
 Senha: 23456
 
 ```
+## 1. Objetivo do Projeto:
+
+O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento de saúde baseado em inteligência artificial, proporcionando acompanhamento contínuo pós-atendimento médico. O sistema visa oferecer suporte proativo aos usuários, avaliando a gravidade dos sintomas e fornecendo orientações sobre a necessidade de retorno ao médico.
+
+<a href="https://juliaazevedolins.github.io/healthguardian-site/">Clique aqui para acessar o nosso site e saber mais sobre o HealthGuardian</a>
+
 # Funcionalidades do HealthGuardian
 
 **1. Cadastro de Pacientes:**

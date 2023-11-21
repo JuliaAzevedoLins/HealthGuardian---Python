@@ -309,7 +309,7 @@ def falar_com_healthguardian():
     respostas = {}
 
     try:
-        respostas["temperatura"] = float(input("Qual é a sua temperatura corporal? "))
+        respostas["temperatura"] = float(input("Qual é a sua temperatura corporal (número - ex: 36.5)? "))
     except ValueError:
         print("Por favor, forneça um valor numérico para a temperatura.")
         return  # Retornar para evitar a continuação do código em caso de erro

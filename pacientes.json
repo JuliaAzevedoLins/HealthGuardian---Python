@@ -4,31 +4,27 @@
         "Maria",
         "Paulo",
         "Vilma",
-        "julia",
-        "Julinha gameplays"
+        "Julia"
     ],
     "cpf_paciente": [
         "50221885897",
         "11111111111",
         "11908801808",
         "17636235803",
-        "48286875800",
-        "50221885894"
+        "48286875800"
     ],
     "sintoma_paciente": [
         "gripe",
         "nausea",
         "dor de cabeca",
         "tontura",
-        "covid",
-        "Colica"
+        "covid"
     ],
     "senha_paciente": [
         "123456",
         "654321",
         "123456",
         "212325",
-        "041003",
-        "666999"
+        "041003"
     ]
 }

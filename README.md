@@ -26,7 +26,8 @@
 ## 1. Objetivo do Projeto:
 
 O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento de saúde baseado em inteligência artificial, proporcionando acompanhamento contínuo pós-atendimento médico. O sistema visa oferecer suporte proativo aos usuários, avaliando a gravidade dos sintomas e fornecendo orientações sobre a necessidade de retorno ao médico.
-<a href="https://juliaazevedolins.github.io/healthguardian-site/">Visite nosso site</a>
+
+<a href="https://juliaazevedolins.github.io/healthguardian-site/">Clique aqui para acessar o nosso site e saber mais sobre o HealthGuardian</a>
 
 ## Funcionalidades Principais:
 
@@ -57,7 +58,8 @@ O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento 
    - Certifique-se de ter o Python instalado
 
 2. **Dependências:**
-   - Instale as dependências necessárias usando `pip install matplotlib`.
+   - Instale as dependências necessárias usando:
+   - `pip install matplotlib`.
    - `pip install pandas`.
    - `pip installprettytable`.
    - As bibliotecas sys e time são módulos padrão do Python e geralmente não precisam ser instalados separadamente, pois já fazem parte da biblioteca padrão

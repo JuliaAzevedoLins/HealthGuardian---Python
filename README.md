@@ -23,7 +23,7 @@
 Para acessar a sessão de funcionários, utilize as seguintes credenciais:
 
 Usuário: admin
-Senha: 23456
+Senha: 123456
 
 ```
 # Objetivo do Projeto:

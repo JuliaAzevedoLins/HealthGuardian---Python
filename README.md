@@ -25,38 +25,38 @@ O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento 
 
 # Funcionalidades do HealthGuardian
 
-1. **Cadastro de Pacientes:**
+**1. Cadastro de Pacientes:**
 - Permite que funcionários realizem o cadastro de novos pacientes, inserindo nome, CPF, sintomas e senha.
 
-2. **Login de Usuários:**
+**2. Login de Usuários:**
 - Funcionalidade de login para funcionários e pacientes, garantindo autenticação segura.
 
-3. **Interatividade com Pacientes:**
+**3. Interatividade com Pacientes:**
 - Pacientes podem interagir com o HealthGuardian, respondendo a perguntas sobre seus sintomas para avaliação.
 
-4. **Análise de Sintomas:**
+**4. Análise de Sintomas:**
 - O sistema realiza uma análise dos sintomas apresentados pelos pacientes, sugerindo medidas com base nas respostas fornecidas.
 
-5. **Visualização de Dados:**
+**5. Visualização de Dados:**
 - Os funcionários têm acesso à lista de pacientes cadastrados, podendo visualizar e imprimir informações como nome, CPF, sintomas e senha de forma organizada.
 
-6. **Integração com Arquivos JSON:**
+**6. Integração com Arquivos JSON:**
 - Utilização de arquivos JSON para armazenar e carregar dados dos pacientes e funcionários.
 
-7. **Menus Interativos:**
+**7. Menus Interativos:**
 - Implementação de menus interativos para facilitar a navegação tanto para funcionários quanto para pacientes.
 
 ## Requisitos e Execução do Código:
 
-1. **Python:**
+**Python:**
 - Certifique-se de ter o Python instalado
 
-2. **Dependências:**
+**Dependências:**
 - Instale as dependências necessárias usando:
 - `pip install matplotlib`.
 - `pip install pandas`.
 - `pip installprettytable`.
 - As bibliotecas sys e time são módulos padrão do Python e geralmente não precisam ser instalados separadamente, pois já fazem parte da biblioteca padrão
 
-3. **Execução:**
+**Execução:**
 - Execute o script para iniciar o programa.

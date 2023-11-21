@@ -23,12 +23,17 @@ O objetivo do projeto HealthGuardian é desenvolver um sistema de monitoramento 
 
 <a href="https://juliaazevedolins.github.io/healthguardian-site/">Clique aqui para acessar o nosso site e saber mais sobre o HealthGuardian</a>
 
-## <span style="background-color: #FF0000; padding: 10px; border-radius: 5px; color: white;">Sessão de Usuários</span>
+
+```diff
+-                                    SESSÃO DE USUÁRIOS                                     -
+             Para acessar a sessão de funcionários, utilize as seguintes credenciais:
+
+                                      Usuário: admin
+                                       Senha: 23456
+
+```
 
 **Para acessar a sessão de funcionários, utilize as seguintes credenciais:**
-- **Usuário:** admin
-- **Senha:** 123456
-
 # Funcionalidades do HealthGuardian
 
 **1. Cadastro de Pacientes:**

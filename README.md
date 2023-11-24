@@ -7,8 +7,8 @@
 ###
 
 <div align="center">
-  <p align="center">Clique aqui para o nosso vídeo explicativo no <a href="https://www.youtube.com/">Youtube</a></p>
-  <a href="https://www.youtube.com/">
+  <p align="center">Clique aqui para o nosso vídeo explicativo no <a href="https://youtu.be/wC-bSg28Ylo">Youtube</a></p>
+  <a href="https://youtu.be/wC-bSg28Ylo">
     <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="40" alt="youtube logo"  />
   </a>
 </div>
